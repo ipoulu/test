@@ -1,0 +1,1854 @@
+@charset "utf-8";
+
+/* ---------------------------
+	BASE
+	1. FONT/RESET
+	2. Fixed
+	3. Header
+	4. Footer
+--------------------------- */
+
+/*---FONT---------------------------------------------------------------------------------------------------------------------*/
+@import url("https://use.typekit.net/nqp4yqj.css");
+@font-face {font-family: "NotoSansCJKjp-Jxck";font-style: normal;font-weight: 400;src: local("NotoSansCJKjp-Bold.otf"),local("NotoSansJP-Bold.otf"),url("/font/NotoSansCJKjp-Jxck-Regular.woff") format("woff");}
+@font-face {font-family: "NotoSansCJKjp-Jxck";font-style: normal;font-weight: 700;src: local("NotoSansCJKjp-Bold.otf"),local("NotoSansJP-Bold.otf"),url("/font/NotoSansCJKjp-Jxck-Bold.woff") format("woff");}
+
+/*---RESET---------------------------------------------------------------------------------------------------------------------*/
+body{margin:0 auto; padding:0; color:#444444; width: 100%; }
+html{margin:0 auto; padding:0; font-size:15px; letter-spacing: 1px; line-height:24px; font-family:"Lato", Arial, Helvetica, "Hiragino Kaku Gothic Pro","Noto Sans", "Noto Sans CJK JP", "NotoSansCJKjp-Jxck","游ゴシック","Yu Gothic",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック"; }
+*{margin:0; padding:0; text-align:left;}
+img{border:none; vertical-align:top; max-width:100%;}
+a img,a,.ar01,#fixbos li,.navisbox ul li a,.b_more a .ar02,.b_more a .ar03,footer #box01>.wrap>ul>li.first>dl>dd>ol>li,footer #box02>.wrap>dl>dd>ol>li{-moz-transition:all 0.4s ease; -webkit-transition:all 0.4s ease; transition:all 0.4s ease;}
+ol, ul{list-style: none;}
+li img {vertical-align:top;}
+a:hover img, #fixbos li:hover,.b_more a:hover,footer #box01>.wrap>ul>li.first>dl>dd>ol>li a:hover,footer #box02>.wrap>dl>dd>ol>li a:hover,#pank ul li a:hover,footer #box03>.wrap>ul>li a:hover{opacity: 0.6;filter: alpha(opacity=60);}
+table {border-collapse: collapse;border-spacing: 0;}
+hr{border-top: 0.5px solid #ededef;}
+.clear{zoom:100%;}
+.clear:after{content:"."; display:block; visibility:hidden; height:0; font-size:0; line-height:0; clear:both;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block;}
+::selection{background:#637c95; color:#fff;}
+::-moz-selection{background:#637c95; color:#fff;}
+.inner{	opacity: 0; transform: translateY(70px); -moz-transform: translateY(70px);}
+.pik a{background: #d99a99 !important;}
+#maximage_s{display:none; width: 100% !important;}
+.sp_n{display: none;}
+.pc_n{display: block;}
+.ptb0{padding: 0 !important;}
+#wrapper_un{opacity: 0;}
+.ct{text-align: center;}
+p.comson{text-align: center; margin-bottom: 100px;}
+.mt-10{margin-top: -10px !important;}
+.top10{top:10px !important;}
+
+*{ border: 1px solid red}
+body {
+  color: #444444;
+  background-color: #EDECEC;
+}
+img {
+  width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+a {
+color:inherit;
+text-decoration:none;
+}
+ul {
+list-style-type:none;
+}
+
+li {
+list-style-position: inside;
+list-style-type:none;
+}
+.br-text{
+  display: block;
+}
+
+.text-br  {
+  display: none;
+}
+
+.wrapper,.xlswrapper {
+  width: 1000px;
+  max-width: 100%;
+ margin: 0 auto  ;
+}
+/* -----maintitle----- */
+.mainvisual-main {
+  position: relative; 
+  font-family: "Noto Serif JP", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.main-title {
+  display: block;
+ width: 100%;
+  position: absolute;
+ top: 0;
+ left: 0;
+  z-index: 3;
+}
+.top-image {
+  width: 100%;
+  height:100vh; 
+  opacity: .5;
+margin: 0 auto;
+text-align: center;
+  z-index: -1;
+}
+.main-btn {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+    top:60%;
+    left:0%;
+    right: 0%;
+
+    z-index: 3;
+  }
+  .main-click {
+    width: 300px;
+    padding: 2%;
+    
+  }
+  .button-text {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 5%;
+  }
+.atelogo,.logo-n  {
+opacity: .7;
+}
+/*----- ate-main -----*/
+.xls-text {
+width: 70%;
+position: absolute;
+bottom: -25%;
+right: 0%;
+}
+
+/* ----main header -----*/
+
+.ate-header {
+  background-image: url(../img/necessary.png);
+  background-size: cover;
+  background-position: center;
+  background-color:rgba(255,255,255,0.18);
+background-blend-mode:lighten;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  font-size: 16px;
+  color: #fff;
+  text-shadow: 2px 2px 2px rgba(108,106,106,0.3);
+  font-weight: 700;
+  max-width: 100%;
+  height: 100vh;
+  z-index: 3;
+}
+
+.ate-container {
+  display: flex;
+  padding-top: 2%;
+  padding-right: 1%;
+  width: 100%;
+  max-width: 100%;
+  height: 100px;
+  flex-direction: column;
+  position: absolute; /* 相対位置の基準に対して絶対位置を設定 */
+  top: 0; /* 上端に配置 */
+  left: 0; /* 左端に配置 */
+  z-index: 1; 
+}
+.ate-top {
+  margin-top: 4%;
+  align-self:flex-end;
+  display: flex;
+  gap: 15px;
+justify-content: flex-end;
+padding-right: 2%;
+}
+
+.ate-divider {
+  border:#fff solid 1px ;
+  width: 1px;
+  height: 20px;
+}
+
+.ate-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-top: 20px;
+  width: 100%;
+  white-space: nowrap;
+}
+/* .ate-nav-item {
+  margin-right: 1.5%;
+} */
+/*-------- second header -------*/
+.ate-second-header {
+  width: 100%;
+display: flex;
+flex-wrap: wrap;
+margin: 0 auto;
+justify-content: flex-end; /* 右寄せ */
+}
+
+.ate-second {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
+  align-items: center;
+  text-align: right;
+  font-size: 16px;
+  color: #5f565a;
+  font-weight: 700;
+  width: 100%;
+max-width: 100%;
+
+  /* height: 15vh; */
+}
+.second-divider {
+  border:#5E565A solid 1px ;
+  width: 1px;
+  height: 20px;
+}
+
+/*------------------- xls-concept ----------------------*/
+.xls-concept {
+  max-width:700px;
+  margin: 15% auto ;
+  font-size: 1.3rem;
+  line-height: 2;
+  position: relative;
+}
+.concept-img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  opacity: .4;
+}
+.myself {
+  text-align: center;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  /* color:#fefcf9; */
+}
+.myself span {
+  font-size: 1.8rem;
+  line-height: 3;
+}
+.xlsconcept {
+  margin-bottom: 0;
+}
+/*-------------------背景の固定---------------------  */
+.xls {
+  background-image: url(../img/necessary.png);
+  position: relative;
+  margin: 0px auto;
+  height: auto;
+
+}
+.bijiris {
+  background-image: url(../img/BIJIRIS_23_10_26_088.png);
+  position: relative;
+  margin: 0px auto;
+  height: auto;
+}
+.bio {
+  background-image: url(../img/biofood.jpg);
+  position: relative;
+  margin: 0px auto;
+  height: auto;
+}
+.ayu {
+  background-image: url(../img/ayurvedacare.jpg);
+  position: relative;
+  margin: 0px auto;
+  height: auto;
+}
+.fixed-bg {
+  height: 300px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  /* border: 1px solid blue; */
+}
+/* ----------- xls-content ---------- */
+
+.xlspilates,.biofood,.ayurvedacare {
+  margin: 150px auto;
+  height: auto;
+}
+.xls-content,.bijiris-content,.biofood-content,.ayu-content {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  position: relative;
+
+}
+
+.content-title {
+  font-size: 4rem;
+text-align: center;
+  letter-spacing: 5px;
+  align-items: center;
+}
+.xlsplus{
+  width: 30%;
+position: absolute;
+top: 30%;
+left: -8%;
+opacity: .4;
+
+}
+.mainus{
+  width: 30%;
+position: absolute;
+top: 33%;
+right:-7%;
+opacity: .3;
+}
+.plus2{
+  width: 30%;
+position: absolute;
+top: 28%;
+left:33%;
+opacity: .3;
+}
+.content-text {
+  text-align: center;
+}
+
+
+.bijiris-right,.biofood-left,.xls-left,.ayu-right{
+  display:flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+text-align: center;
+}
+
+
+.xls-right,.bijiris-left,.biofood-right,.ayu-left {
+  width: 50%;
+  padding-top: 80px;
+}
+/*---- navi hover -----*/
+
+.ate-top li a,.ate-nav li a{
+  /*テキストの基点とするためrelativeを指定*/
+position: relative;
+  /*はみ出る要素を隠す*/
+overflow: hidden;
+padding:10px 60px;
+}
+
+.ate-top li span,.ate-nav li span{
+  /*絶対配置でテキストの位置を決める*/
+position: absolute;
+left: 50%;
+top:0;
+  /*アニメーションの指定*/
+transition: all .5s;
+transform: translate(-50%, 0);/*X方向に-50% ※中央寄せにするため*/
+/*ブロック要素にして透過なし、テキスト折り返しなし*/  
+display: block;
+opacity:1;
+white-space: nowrap;
+}
+
+/*差し替わるテキストの設定*/
+.ate-top li span:nth-child(2),.ate-nav li span:nth-child(2){
+opacity:0;/*透過0に*/
+  transform: translate(-50%,100%);/*X方向に-50% Y方向に100%*/
+font-size: small;
+}
+
+/*hoverするとテキストが入れ替わる設定*/
+.ate-top li:hover span:nth-child(1),.ate-nav li:hover span:nth-child(1){
+opacity:0;/*透過0に*/
+  transform: translate(-50%,-100%);/*X方向に-50% Y方向に-100%*/
+}
+
+.ate-top li:hover span:nth-child(2),.ate-nav li:hover span:nth-child(2){
+opacity:1;/*不透明に*/
+transform: translate(-50%, 0);/*X方向に-50% Y方向に0*/
+}
+/*---- btn hover -----*/
+
+.reservation-btn a{
+  /*テキストの基点とするためrelativeを指定*/
+position: relative;
+  /*はみ出る要素を隠す*/
+overflow: hidden;
+padding:10px 60px;
+}
+
+.reservation-btn p span{
+  /*絶対配置でテキストの位置を決める*/
+position: absolute;
+left: 50%;
+top:0;
+  /*アニメーションの指定*/
+transition: all .5s;
+transform: translate(-50%, 0);/*X方向に-50% ※中央寄せにするため*/
+/*ブロック要素にして透過なし、テキスト折り返しなし*/  
+display: block;
+opacity:1;
+white-space: nowrap;
+}
+
+/*差し替わるテキストの設定*/
+.reservation-btn p span:nth-child(2){
+opacity:0;/*透過0に*/
+  transform: translate(-50%,100%);/*X方向に-50% Y方向に100%*/
+}
+
+/*hoverするとテキストが入れ替わる設定*/
+.reservation-btn p:hover span:nth-child(1){
+opacity:0;/*透過0に*/
+  transform: translate(-50%,-100%);/*X方向に-50% Y方向に-100%*/
+}
+
+.reservation-btn p:hover span:nth-child(2){
+opacity:1;/*不透明に*/
+transform: translate(-50%, 0);/*X方向に-50% Y方向に0*/
+}
+
+.reservation-btn span {
+  display: block;
+  font-size: 2rem;
+  padding: 20px;
+  color: #fff;
+  
+}
+.reservation-btn a {
+  display: block;
+justify-content: center;
+  height: 70px;
+  width: 300px;
+  color: #fff;
+  width: 300px;
+}
+
+/*----- title共通 -----*/
+
+.common-header{
+  display: flex;
+  flex-direction: column;
+  color: #444;
+  font-weight: 700;
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.common-title {
+  display: flex;
+  font-size: 52px;
+  text-align: center;
+  letter-spacing: 6.24px;
+  margin-top: 10%;
+}
+.common-title-separator {
+  border: 1px solid #5f565a;
+  height: 10vh;
+}
+.common-title-text {
+  margin: auto 0;
+  padding-left: 7%;
+}
+.common-subtitle {
+  letter-spacing: 2.8px;
+  text-align: left;
+  margin-top: 10%;
+  font-size: 1.2rem;
+}
+.common-separator {
+  border: 1px solid #5f565a;
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+.schedule-text p {
+text-align: right;
+}
+.common-plus {
+  width: 40%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  opacity: .3;
+  }
+  .common-minus {
+    width: 27%;
+    position: absolute;
+    top: 90%;
+    left: 5%;
+    opacity: .3;
+  }
+  .bijiris-plus{
+    width: 40%;
+    position: absolute;
+    top: 17%;
+    left: -14%;
+    opacity: .3;
+    }
+.diet-plus {
+    width: 27%;
+    position: absolute;
+    top: 52%;
+    left: -6%;
+    opacity: .3;
+    }
+.ayu-minus {
+    width: 60%;
+    position: absolute;
+
+    top: 10%;
+    left: -15%;
+    opacity: .3;
+    }
+/*----- bijiris -----*/
+.select  {
+  width: 700px;
+  margin: 0% auto;
+  line-height: 2;
+}
+.select-title,.attention-text{
+ font-size: 1.5rem;
+}
+.select-title {
+  margin-bottom: 10%;
+}
+.section-list li{
+  list-style-position: inside;
+  list-style-type: square;
+
+}
+video {
+  max-width: 700px;
+}
+.video {
+  margin: 5% auto;
+  text-align: center;
+}
+.attention {
+  width: 700px;
+  margin: 0 auto;
+  background-color: #fff;
+  text-align: center;
+  padding: 7%;
+}
+
+/* ---------bio ayu---------- */
+.background {
+  background-image: url(../img/ayurvedacare.jpg);
+  background-size: cover;
+  background-position: center;
+  background-color:rgba(255,255,255,0.7);
+background-blend-mode:lighten;
+
+}
+.background-bio {
+  background-image: url(../img/biofood.jpg);
+  background-size: cover;
+  background-position: center;
+  background-color:rgba(255,255,255,0.7);
+background-blend-mode:lighten;
+}
+.background-reservation {
+  background-image: url(../img/back-flower.jpg);
+  background-size: cover;
+  background-position: center;
+  background-color:rgba(255,255,255,0.7);
+background-blend-mode:lighten;
+}
+
+.ayurvedacare-content {
+  width: 100%;
+  /* height: 100vh; */
+  /* background-color: #5E565A; */
+
+  }
+.ayu-title {
+  font-size: 1.4rem;
+  /* background-color: #a18a9d; */
+}
+.ayu-box {
+  width: 700px;
+  max-width: 100%;
+  margin: 10% auto ; 
+
+
+
+}
+.ayu-list {
+  text-align:center;
+  line-height: 3;
+}
+
+/*---------- Reservation---------- */
+/* .ayurvedacare-content {
+  width: 100%;
+  height: 50vh;
+  } */
+.reservation-box{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+.reservation-box iframe{
+  width: 100%;
+  height: 60vh;
+}
+/*----- genre -----*/
+.category-plus {
+  width: 40%;
+  position: absolute;
+  top: 16%;
+  left: -12%;
+  opacity: .3;
+  }
+.genre {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+.genre-card {
+  width: 380px;
+  margin-top: 3%;
+}
+.genre-image {
+  width: 300px;
+  height: 300px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  margin: 0 auto;
+}
+.genre-title,.genre-description {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.separator {
+  border: 1px solid #5f565a;
+}
+
+.read-more-text {
+  font-weight: 700;
+  color: #fff;
+  padding: 13px 0 13px 0;
+  text-align: center;
+}
+/* ----- btn ------ */
+.read-more-button {
+  width: 200px;
+  margin: 15px auto;
+  display: block;
+  background-color: #5E565A;
+  background: transparent;
+  border: none;
+  position: relative;
+  border-radius: 0;
+  z-index: 1;
+}
+.read-more-button::before,
+.read-more-button::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+  transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+}
+.read-more-button::before {
+  background: #5E565A;
+  border: 2px solid #DCD3CB;
+  z-index: -1;
+}
+.read-more-button::after {
+  background: #8E8884;
+  z-index: -2;
+}
+.read-more-button:hover {
+  color:#5E565A;
+}
+.read-more-button:hover::before {
+  background: transparent;
+}
+
+.read-more-button:hover::after {
+  top: 6px;
+  left: 6px;
+}
+
+.about-text {
+  max-width: 700px;
+  padding: 3%;
+  margin: 3% auto;
+  background-color: #fff;
+}
+/* ----- btn ------ */
+.reservation-btn {
+  width: 300px;
+  margin: 15px auto;
+  display: block;
+  background-color: #5E565A;
+  background: transparent;
+  border: none;
+  position: relative;
+  border-radius: 0;
+  z-index: 5;
+  position: fixed;
+  bottom: 10px;
+  right: 100px;
+}
+.reservation-btn::before,
+.reservation-btn::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  margin: auto;
+  transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+}
+.reservation-btn::before {
+  background-color: #d99a99;
+  border: 1px solid #fff;
+  z-index: -1;
+}
+.reservation-btn::after {
+  background:#d9b1b1;
+  z-index: -2;
+}
+.reservation-btn a:hover {
+  color: #8E8884;
+}
+.reservation-btn:hover::before {
+  background: transparent;
+}
+
+.reservation-btn:hover::after {
+  top: 6px;
+  left: 6px;
+}
+
+
+/*----- studio -----*/
+
+.studio-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.studio-images {
+  display: flex;
+  margin-top: 2%;
+  width: 100%;
+  height: 600px;
+}
+.studio-image {
+width: 50%;
+}
+.studio-text {
+  margin: 7%;
+  text-align:left;
+  line-height: 2;
+}
+.studio-description-goal {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+/*----- instructors -----*/
+.instructor-card {
+  width: 300px;
+  margin-top: 3%;
+}
+.instructor-image {
+  width: 250px;
+  height: 250px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  margin: 0 auto;
+}
+/*----- instoructor ----- */
+.instructor-profile {
+  background-color: #D8D8D8;
+  width: 100%;
+  padding: 3% 5%;
+  margin-top: 5%;
+}
+.instructor-info {
+  display: flex;
+  width: 700px;
+  max-width: 100%;
+  margin: 0 auto ;
+  text-align: center;
+  align-items: center;
+  line-height: 1.5;
+}
+.instructor-details,.lesson-details {
+  width: 49%;
+}
+.booking-info {
+  text-align: center;
+}
+.booking-info p {
+  max-width: 200px;
+  margin: 3% auto ;
+  color: #03315f;
+}
+.person-name,.person-name-en{
+text-align: center;
+}
+.person-name {
+  font-size: 2rem;
+}
+.person-name-en{
+  font-size: 1.3rem;
+  }
+.social-media {
+  display: flex;
+  flex-wrap: wrap;
+ justify-content: center;
+}
+.social-icon {
+  width: 50px;
+  padding: 3%;
+  align-items: center;
+}
+.lesson-schedule {
+  font-weight: bold;
+  margin-bottom: 3%;
+}
+.lesson-frequency {
+  font-size: .9rem;
+}
+.lesson-name {
+font-size: 1.2rem;
+font-weight: bold;
+color:#03315f;
+}
+.lesson-info,.instructor-qualifications,.instructor-media {
+  margin-bottom: 5%;
+}
+/*----- table -----*/
+.price {
+  margin: 0 auto;
+  width: 700px;
+}
+table , td, th {
+	border: 1px solid #5f565a;
+	border-collapse: collapse;
+  max-width: 700px;
+  text-align: center;
+  margin-bottom: 1%;
+}
+td, th {
+	padding: 3px;
+	width: 300px;
+	height: 25px;
+}
+th {
+	background-color: #637c95;
+  opacity: .8;
+  text-align: center;
+}
+.even {
+	background: #fbf8f0;
+}
+.odd {
+	background: #fefcf9;
+}
+.time {
+  width: 100px;
+}
+.lesson-course {
+  width: 500px;
+  color: #03315f;
+  font-weight: bold;
+}
+.responsible-name {
+  width: 30%;
+}
+.xls {
+  color:#444444;
+  font-weight: normal;
+}
+
+.time p {
+  font-size: .5rem;
+  text-align: center;
+}
+.schedule-text {
+  margin-top: 3%;
+}
+.xls-link{
+  text-decoration: underline;
+}
+.share-text {
+  max-width: 700px;
+  margin-bottom: 5%;
+}
+.about-text a {
+  color:#d99a99;
+  font-size: 1.5rem;
+  text-decoration:underline;
+}
+.bijiris-subtitle {
+  font-size: 1.8rem;
+  position: relative;
+}
+.bijiris-subtitle {
+  position: absolute;
+  top: 150px;
+  left: 250px;
+}
+.bijiris-subtitle::after {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: #5E565A;
+  display: block;
+  top: 12px;
+  left: -60px;
+}
+.bijiris-subtitle::before {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: #5E565A;
+  display: block;
+  top: 12px;
+  left: 160px;
+}
+
+/*----- lesson genre -----*/
+.instructor-qualifications span {
+  font-weight: bold;
+}
+/*----- footer ----- */
+.necessary-footer {
+  background-color: #8E8884;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 700;
+  justify-content: center;
+  padding: 27px 60px;
+  width: 100%;
+  margin-top: 15%;
+}
+footer .ate-divider {
+  border:#fff solid 1px ;
+  width: 1px;
+  height: 20px;
+}
+footer .ate-logo {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.footer-concept {
+  display: flex;
+  width: 100%;
+  max-width: 1095px;
+  flex-direction: column;
+}
+
+.footer-tagline {
+  font-family: Lato, sans-serif;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 17px;
+  width: 100%;
+}
+.footer-address {
+  width: 34%;
+}
+.footer-links {
+  width: 55%;
+  margin-left: auto;
+}
+
+.footer-links-col-1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-links li{
+  margin-left: 7%;
+}
+
+.footer-copyright {
+  font-family: Lato, sans-serif;
+  align-self: center;
+  margin-top: 32px;
+}
+/*========= ページトップのためのCSS ===============*/
+
+/*リンクの形状*/
+#page-top a{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  background:#a18a9d;
+  border-radius: 5px;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase; 
+  text-decoration: none;
+  font-size:0.6rem;
+  transition:all 0.3s;
+}
+
+#page-top a:hover{
+  background: #5f565a;
+}
+
+/*リンクを右下に固定*/
+#page-top {
+  position: fixed;
+  right: 10px;
+  bottom:10px;
+  z-index: 2;
+    /*はじめは非表示*/
+  opacity: 0;
+  transform: translateY(80px);
+}
+
+/*　上に上がる動き　*/
+
+#page-top.UpMove{
+  animation: UpAnime 0s forwards;
+}
+@keyframes UpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove{
+  animation: DownAnime 0.1s forwards;
+}
+@keyframes DownAnime{
+  from {
+    opacity: 1;
+  transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+  transform: translateY(100px);
+  }
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+
+@media (max-width: 768px){
+.xlswrapper {
+width: 100%;
+ margin: 0 auto  ;
+} 
+
+.xls-concept {
+  background-color: #d8d8d8;
+  z-index: 1;
+}
+  .one {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+
+}
+.bg {
+    position: fixed;
+    top: 0%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: none;
+    z-index: -1;
+}
+.show .bg {
+    display: block;
+}
+.bg._01 {
+    background-image: url("../img/necessary.png");
+}
+.bg._02 {
+    background-image: url("../img/BIJIRIS_23_10_26_088.png");
+}
+.bg._03 {
+    background-image: url("../img/biofood.jpg");
+}
+.bg._04 {
+    background-image: url("../img/ayurvedacare.jpg");
+}
+.xls-content,.bijiris-content,.biofood-content,.ayu-content {
+    max-width: 100%;
+    margin: 250px auto 0;
+    /* padding: 20px; */
+    background: #d8d8d8d6;
+}
+.wrap{
+  margin: 0% auto 0;
+}
+
+.fixed-bg {
+  display: none;
+  /* border: 1px solid blue; */
+} 
+.xlspilates,.biofood,.ayurvedacare {
+  margin: 150px auto 0;
+  height: auto;
+}
+.xls-content,.bijiris-content,.biofood-content,.ayu-content {
+  flex-direction: column;
+  justify-content: center;
+}
+.bijiris-content,.ayu-content {
+  flex-direction: column-reverse;
+}
+
+.content-title {
+  font-size: 3rem;
+text-align: center;
+padding: 20px 0;
+}
+.xlsplus{
+width: 30%;
+position: absolute;
+top: 30%;
+left: 0%;
+opacity: .4;
+}
+.mainus{
+  width: 30%;
+position: absolute;
+top: 27%;
+left:0%;
+opacity: .4;
+}
+.plus2{
+  width: 30%;
+position: absolute;
+top: 33%;
+left:0%;
+opacity: .4;
+}
+.content-text {
+  text-align: center;
+  line-height: 2;
+}
+.bijiris-right,.biofood-left,.xls-left,.ayu-right{
+  display:flex;
+ 
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+text-align: center;
+}
+
+.xls-right,.bijiris-left,.biofood-right,.ayu-left {
+  width: 100%;
+} 
+.br-text{
+  display: none;
+}
+.text-br {
+  display: block;
+}
+
+  /*
+ハンバーガ―メニュー
+*/
+.hamburger {
+  width: 50px;
+  height: 50px;
+  /* background-color: #5f565a39; */
+
+  position: fixed;
+  top: 3%;
+  right: 2%;
+  z-index: 30;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hamburger:hover {
+  opacity: 0.7;
+}
+.xls-concept {
+  margin: 15% auto 0;
+  font-size: 1rem;
+  line-height: 3;
+  position: relative;
+}
+.concept-img {
+padding: 6% 3% 10%;
+  opacity: .4;
+}
+.myself {
+  width: 100%;
+  margin: 3%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+}
+.myself span {
+  font-size: 1.6rem;
+}
+.xlsconcept {
+  margin-bottom: 0;
+}
+/* ハンバーガーメニューの線の設定（メニューが閉じている時） */
+.hamburger span {
+  width: 90%;
+  height: 4px;
+  border-radius: 15%;
+  background: #444;
+  position: absolute;
+  left: 4%;
+  transition: 0.3s;
+}
+/* 1本目の線の位置を設定 */
+.hamburger span:nth-child(1) {
+  top: 20%;
+}
+/* 2本目の線の位置を設定 */
+.hamburger span:nth-child(2) {
+  top: 50%;
+}
+/* 3本目の線の位置を設定 */
+.hamburger span:nth-child(3) {
+  top: 80%;
+}
+/*
+ハンバーガーメニューの線の設定（メニューが開いている時）
+1本目の線を-45度回転
+*/
+.open .hamburger span:nth-child(1) {
+  top: 47%;
+  background: #fff;
+  transform: rotate(-45deg);
+}
+/* 2本目と3本目は重ねて45度回転 */
+.open .hamburger span:nth-child(2),
+.open .hamburger span:nth-child(3) {
+  top: 47%;
+  background: #fff;
+  transform: rotate(45deg);
+}
+/*
+メニューの設定
+最初は閉じている状態なので、「opacity: 0;」「visibility: hidden;」
+で要素を非表示にしておく
+*/
+
+#navi {
+  width: 100%;
+  height: 100vh;
+  background-color: #5f565ae8;
+  color: #fff;
+  position: fixed;
+  top:0%;
+  left: 0;
+  z-index: 20;
+  text-align: center;
+  transition: all 0.6s ease;
+  opacity: .5;
+  visibility: hidden;
+}
+/*
+ハンバーガーメニューがクリックされた際に、jQueryでheaderにopenクラスを追加して、
+メニューを表示させる。
+*/
+.open #navi {
+  opacity: 1;
+  visibility: visible;
+}
+
+  /* ----main header -----*/
+  .ate-top {
+
+    align-self:center;
+    display: flex;
+
+  justify-content:center;
+  }
+.ate-nav {
+  flex-direction: column;
+  width: 300px;
+  align-items: center;
+
+}
+.ate-nav-item {
+  font-size: 2rem;
+line-height: 2;
+margin-right: 1%;
+}
+/*----- title共通 -----*/
+
+.common-header{
+  display: flex;
+  flex-direction: column;
+  color: #444;
+  font-weight: 700;
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0  3%;
+  /* background-color: #D8D8D8; */
+}
+
+.common-title-text {
+  font-size: 38px;
+line-height: 1.0;
+}
+.common-subtitle {
+  margin-top: 13%;
+
+  font-size: 1rem;
+
+}
+.common-plus {
+  width: 40%;
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  opacity: .3;
+  }
+.common-minus {
+    width: 27%;
+    position: absolute;
+  
+    top: 90%;
+    left: 5%;
+    opacity: .3;
+    }
+    .bijiris-plus{
+      width: 40%;
+      position: absolute;
+      top: 17%;
+      left: -11%;
+      opacity: .3;
+      }
+    .diet-plus {
+      width: 27%;
+      position: absolute;
+      top: 71%;
+      left: -5%;
+      opacity: .3;
+      }
+    .ayu-minus {
+      width:60%;
+      position: absolute;
+    
+      top: 30%;
+      left: -10%;
+      opacity: .3;
+      }
+    /* -----maintitle----- */
+
+.main-title {
+  display: block;
+  max-width: 100%;
+  position: absolute;
+ top: 0;
+ left: 0;
+  z-index: 3;
+}
+.top-image {
+  width: 100%;
+  height:100vh; 
+  opacity: .5;
+text-align: center;
+  z-index: -1;
+}
+.main-btn {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+    top:50%;
+    left:0%;
+    right: 0%;
+    z-index: 3;
+}
+  .main-click {
+    width: 50%;
+text-align: center;
+  margin: 0 auto;
+    
+  }
+  .button-text {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5%;
+  }
+
+  .top-image {
+    width: 100%;
+    /* height:50vh;  */
+    object-fit: cover;
+  }
+  /*----- ate-main -----*/
+
+.ate-text {
+position: absolute;
+top: 70%;
+left: 0%;
+right: 0%;
+}
+  /* ----main header -----*/
+  .mainvisual {
+    flex-direction: column;
+  }
+  .atelogo {
+    width: 150px;
+text-align: center;
+  }
+  .logo-n {
+    width: 150px;
+  }
+  /*-------- second header -------*/
+
+.ate-second {
+  width: 100%;
+  justify-content: center; 
+
+}
+.ate-nav {
+  margin: 0 auto;
+}
+.second-divider {
+  border:#5E565A solid 1px ;
+  width: 1px;
+  height: 20px;
+}
+  /*----- concept -----*/
+
+.concept {
+  margin:  5% auto 0;
+}
+.concept-layout {
+  flex-direction: column-reverse;
+}
+
+.text-column {
+  align-items: center;
+  width: 100%;
+
+}
+.text-header {
+  display: flex;
+  border-left: 1px solid #5f565a;
+  max-width: 100%;
+  height: auto;
+}
+.header-image {
+  width: 350px;
+text-align: center;
+margin: 0 auto;
+}
+
+.image-column {
+  width:100%;
+
+}
+.main-image {
+  width: 100%;
+}
+
+  
+  /*----- studio -----*/
+  
+  .studio-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  }
+  .studio-images {
+    display: flex;
+    margin-top: 2%;
+    width: 100%;
+    height: 600px;
+  }
+  .studio-image {
+  width: 50%;
+  }
+  .studio-text {
+    margin: 7%;
+    text-align:left;
+    line-height: 2;
+  }
+  .studio-description-goal {
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+  
+  /*----- genre -----*/
+
+.genre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+}
+.genre-card {
+ margin: 10% auto;
+}
+.category-plus {
+  width: 40%;
+  position: absolute;
+  top: 16%;
+  left: -8%;
+  opacity: .3;
+}
+  /*----- instructors -----*/
+  .instructor-card {
+    width: 300px;
+    margin-top: 3%;
+  }
+  .instructor-image {
+    width: 250px;
+    height: 250px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto;
+  }
+  /*----- instructor ----- */
+  .instructor-profile {
+    background-color: #D8D8D8;
+    width: 100%;
+    padding: 3% 5%;
+    margin-top: 5%;
+  }
+  .instructor-info {
+    flex-direction: column;
+  }
+  .instructor-details,.lesson-details {
+    width: 100%;
+  }
+  .booking-info {
+    text-align: center;
+  }
+  .booking-info p {
+    max-width: 200px;
+    margin: 3% auto ;
+    color: #03315f;
+  }
+  .person-name,.person-name-en{
+  text-align: center;
+  }
+  .person-name {
+    font-size: 2rem;
+  }
+  .person-name-en{
+    font-size: 1.3rem;
+    }
+  .social-media {
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: center;
+  }
+  .social-icon {
+    width: 50px;
+    padding: 3%;
+    align-items: center;
+  }
+  .lesson-schedule {
+    font-weight: bold;
+    margin-bottom: 3%;
+  }
+  .lesson-info li {
+    text-align: center;
+  }
+  .lesson-frequency {
+    font-size: .9rem;
+  }
+  .lesson-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color:#03315f;
+  }
+  .lesson-info,.instructor-qualifications,.instructor-media {
+    margin-bottom: 5%;
+  }
+  .schedule-text {
+    margin-top: 3%;
+  }
+  .xls-link{
+    text-decoration: underline;
+  }
+  .share-text {
+    max-width: 700px;
+    margin-bottom: 5%;
+  }
+  /*========= ページトップのためのCSS ===============*/
+  
+  /*リンクの形状*/
+  #page-top a{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background:#a18a9d;
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase; 
+    text-decoration: none;
+    font-size:0.6rem;
+    transition:all 0.3s;
+  }
+  
+  #page-top a:hover{
+    background: #5f565a;
+  }
+  
+  /*リンクを右下に固定*/
+  #page-top {
+    position: fixed;
+    right: 10px;
+    bottom:10px;
+    z-index: 2;
+      /*はじめは非表示*/
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  
+  /*　上に上がる動き　*/
+  
+  #page-top.UpMove{
+    animation: UpAnime 0.5s forwards;
+  }
+  @keyframes UpAnime{
+    from {
+      opacity: 0;
+    transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }
+  
+  /*　下に下がる動き　*/
+  
+  #page-top.DownMove{
+    animation: DownAnime 0.5s forwards;
+  }
+  @keyframes DownAnime{
+    from {
+      opacity: 1;
+    transform: translateY(0);
+    }
+    to {
+      opacity: 1;
+    transform: translateY(100px);
+    }
+  }
+/*----- ate-main -----*/
+.xls-text {
+width: 100%;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0%;
+  }
+
+  /*------------------- xls-concept ----------------------*/
+  .xls-concept {
+    margin: 15% auto 0;
+    line-height: 2;
+  }
+
+  .myself {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+  }
+
+  /* ----------- xls-content ---------- */
+ 
+  /*----- bijiris -----*/
+  .select  {
+    width: 700px;
+    margin: 0% auto;
+    line-height: 2;
+  }
+  .select-title,.attention-text{
+   font-size: 1.5rem;
+  }
+  .select-title {
+    margin-bottom: 10%;
+  }
+
+  video {
+    max-width: 100%;
+  }
+  .attention {
+    width: 100%;
+    margin: 0 auto;
+    padding: 7%;
+  }
+  
+  /* ---------bio ayu---------- */
+  
+  .ayurvedacare-content {
+    max-width:  100%;
+    /* height: 100vh; */
+    }
+
+  .ayu-box {
+  margin-top: 30%;
+  align-items: center;
+  }
+  
+  /* ----- btn ------ */
+  .reservation-btn {
+    width: 100px;
+    margin: 15px auto;
+    position: fixed;
+    bottom: 70px;
+    right: 10px;
+  }
+  .reservation-btn::before,
+  .reservation-btn::after {
+    top: 0;
+    left: 0px;
+    right: 0;
+  }
+.reservation-btn span {
+  display: block;
+  font-size: 1rem;
+  padding: 0px;
+  color: #fff;
+  
+}
+.reservation-btn p span{
+position: absolute;
+left:16.5%;
+top:30%;
+}
+  /*----- table -----*/
+  .price {
+    max-width: 300px;
+  }
+  .time {
+    width: 30%;
+    text-align:left ;
+  }
+  .responsible-name {
+    width: 15%;
+  }
+  .share-text {
+    max-width: 700px;
+    margin-bottom: 5%;
+  }
+  .bijiris-subtitle {
+    font-size: 1.8rem;
+    position: relative;
+  }
+  .bijiris-subtitle {
+    position: absolute;
+    top: 120px;
+    left: 250px;
+  }
+  
+  /*----- lesson genre -----*/
+  .instructor-qualifications span {
+    font-weight: bold;
+  }
+  
+  /*----- footer ----- */
+.necessary-footer {
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 5px;
+  width: 100%;
+  margin-top: 30%;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  margin-top: 17px;
+  width: 100%;
+}
+.footer-address {
+  width: 100%;
+  margin-bottom: 5%;
+}
+.footer-links {
+  width: 100%;
+}
+
+.footer-links-col-1 {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.footer-links li{
+width: 40%;
+}
+
+.footer-copyright {
+  font-family: Lato, sans-serif;
+  align-self: center;
+  margin-top: 32px;
+}
+}
+
+
